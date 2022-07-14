@@ -8,7 +8,7 @@ const Login = ({ setter, user }) => {
   const [password, setPassword] = useState();
   const [logBool, setLogBool] = useState(false);
 
-  useEffect(() => {
+  useEffect((setter) => {
     if (localStorage.key("myToken")) {
       tokenFetch(setter);
     }
