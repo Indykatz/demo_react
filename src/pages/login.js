@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Navigate } from "react-router-dom";
-import { signUp, tokenFetch } from "../utils";
+import { signUp, tokenFetch } from "../utlis";
 
 const Login = ({ setter, user }) => {
   const [username, setUsername] = useState();

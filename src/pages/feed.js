@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { fetchPhotos } from "../utils";
-import Image from "../components/image";
+import { fetchPhotos } from "../utlis";
+import Image from "../components/images";
 import Navbar from "../components/navbar";
 
 const Feed = ({ user, setter }) => {
