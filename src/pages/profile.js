@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { updateFetch, deleteFetch } from "../utils";
+import { updateFetch, deleteFetch } from "../utlis";
 import Navbar from "../components/navbar";
 
 const Profile = ({ setter, user }) => {
