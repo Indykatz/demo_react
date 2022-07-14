@@ -1,9 +1,10 @@
-const Home = () => {
+import Navbar from "../components/navbar";
+
+const Home = ({ user, setter }) => {
   return (
-    <div className="Home">
-      <div>
-        <h1>Home</h1>
-      </div>
+    <div>
+      <Navbar user={user} setter={setter} />
+      <h1>Welcome {user}</h1>
     </div>
   );
 };
