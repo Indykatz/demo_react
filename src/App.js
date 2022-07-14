@@ -1,10 +1,11 @@
-import "./App.css";
+// import "./App.css";
+import { AppStyle } from "./styles/app.styled";
 
 const App = () => {
   return (
-    <div className="App">
+    <AppStyle>
       <div></div>
-    </div>
+    </AppStyle>
   );
 };
 
