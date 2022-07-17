@@ -1,10 +1,10 @@
-
+import { FooterStyle } from "../styles/footer.styled";
 const Footer = () => {
-    return (
-        <div>
-            <h3>Made by Eddie</h3>
-        </div>
-      );
-}
- 
+  return (
+    <FooterStyle>
+      <h3>Made by Ed and Kat</h3>
+    </FooterStyle>
+  );
+};
+
 export default Footer;

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Navigate } from "react-router-dom";
 import { signUp, tokenFetch } from "../utlis";
-import { LoginButs } from "../styles/app.styled";
+import { LogForm, LoginButs } from "../styles/app.styled";
 
 const Login = ({ setter, user }) => {
   const [username, setUsername] = useState();
@@ -20,7 +20,7 @@ const Login = ({ setter, user }) => {
     await signUp({ username, email, password }, setter);
   };
   return (
-    <div>
+    <LogForm>
       {user && <Navigate to="/home" />}
       <form onSubmit={submitHandler}>
         <input
@@ -43,7 +43,7 @@ const Login = ({ setter, user }) => {
       <LoginButs onClick={() => setLogBool(!logBool)}>
         {logBool ? "Don't " : "Already "} have an account?
       </LoginButs>
-    </div>
+    </LogForm>
   );
 };
 
