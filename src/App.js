@@ -8,6 +8,7 @@ import "./App.css";
 import { TheApp, Content } from "./styles/app.styled";
 import Header from "./components/header";
 import Footer from "./components/footer";
+import Contests from "./pages/contests";
 
 const App = () => {
   const [user, setUser] = useState();
@@ -26,7 +27,7 @@ const App = () => {
             path="/profile"
             element={<Profile setter={setUser} user={user} />}
           />
-          <Route path="/contest" element={<Contest user={user} setter={setUser}/>} />
+          <Route path="/contests" element={<Contests user={user} setter={setUser}/>} />
         </Routes>
        </Content>
       </BrowserRouter>
