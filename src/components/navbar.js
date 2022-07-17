@@ -15,7 +15,7 @@ const Navbar = ({ user, setter }) => {
           <Link to="/feed">Feed</Link>
         </li>
         <li>
-          <Link to="/contest">Contest</Link>
+          <Link to="/contests">Contest</Link>
         </li>
         <li
           onClick={() => {
