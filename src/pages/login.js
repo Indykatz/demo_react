@@ -21,6 +21,7 @@ const Login = ({ setter, user }) => {
   };
   return (
     <LogForm>
+      {"\u2728"}
       {user && <Navigate to="/home" />}
       <form onSubmit={submitHandler}>
         <input
