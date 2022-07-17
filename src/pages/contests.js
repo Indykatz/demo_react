@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
+import Navbar from "../components/navbar";
 
-const Contests = () => {
+const Contests = ({ setter, user }) => {
   // useState
   const [contests, setContest] = useState([]);
   // error handling useState
@@ -25,6 +26,8 @@ const Contests = () => {
   }, []);
   return (
     <div>
+      <Navbar user={user} setter={setter} />
+      <h1>Welcome {user}</h1>
       <div>
         {error && <p>{error}</p>}
         <div>
