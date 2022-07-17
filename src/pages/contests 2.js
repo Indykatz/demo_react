@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
-import Navbar from "../components/navbar";
-import { FlexBox, EachBox } from "../styles/contests.styed";
 
-const Contests = ({ setter, user }) => {
+const Contests = () => {
   // useState
   const [contests, setContest] = useState([]);
   // error handling useState
@@ -27,24 +25,15 @@ const Contests = ({ setter, user }) => {
   }, []);
   return (
     <div>
-      <Navbar user={user} setter={setter} />
-      <h1>Welcome {user}</h1>
       <div>
         {error && <p>{error}</p>}
-        <FlexBox>
+        <div>
           {contests.map((contest) => (
-            <EachBox key={contest.id}>
+            <div key={contest.id}>
               <h3>{contest.name}</h3>
-              {contest.url}
-              <ul>
-                <li>{contest.start_time}</li>
-                <li>{contest.end_time}</li>
-                <li>{contest.site}</li>
-                <li>{contest.status}</li>
-              </ul>
-            </EachBox>
+            </div>
           ))}
-        </FlexBox>
+        </div>
       </div>
     </div>
   );
