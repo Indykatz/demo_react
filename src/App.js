@@ -5,7 +5,7 @@ import Home from "./pages/home";
 import Feed from "./pages/feed";
 import Profile from "./pages/profile";
 import "./App.css";
-import { TheApp } from "./styles/app.styled";
+import { TheApp, Content } from "./styles/app.styled";
 import Header from "./components/header";
 import Footer from "./components/footer";
 
@@ -17,6 +17,7 @@ const App = () => {
       
       <BrowserRouter>
       <Header/>
+      <Content>
         <Routes>
           <Route path="/" element={<Login setter={setUser} user={user} />} />
           <Route path="/home" element={<Home user={user} setter={setUser} />} />
@@ -26,7 +27,7 @@ const App = () => {
             element={<Profile setter={setUser} user={user} />}
           />
         </Routes>
-       
+       </Content>
       </BrowserRouter>
        <Footer/>
     </TheApp>
