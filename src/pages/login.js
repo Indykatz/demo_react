@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Navigate } from "react-router-dom";
 import { signUp, tokenFetch } from "../utlis";
+import { LoginButs } from "../styles/app.styled";
 
 const Login = ({ setter, user }) => {
   const [username, setUsername] = useState();
@@ -37,11 +38,11 @@ const Login = ({ setter, user }) => {
           placeholder="Password"
           type="password"
         />
-        <button type="submit">{logBool ? "Log In" : "Sign Up"}</button>
+        <LoginButs type="submit">{logBool ? "Log In" : "Sign Up"}</LoginButs>
       </form>
-      <button onClick={() => setLogBool(!logBool)}>
+      <LoginButs onClick={() => setLogBool(!logBool)}>
         {logBool ? "Don't " : "Already "} have an account?
-      </button>
+      </LoginButs>
     </div>
   );
 };

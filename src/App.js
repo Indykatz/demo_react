@@ -6,13 +6,17 @@ import Feed from "./pages/feed";
 import Profile from "./pages/profile";
 import "./App.css";
 import { TheApp } from "./styles/app.styled";
+import Header from "./components/header";
+import Footer from "./components/footer";
 
 const App = () => {
   const [user, setUser] = useState();
 
   return (
     <TheApp>
+      
       <BrowserRouter>
+      <Header/>
         <Routes>
           <Route path="/" element={<Login setter={setUser} user={user} />} />
           <Route path="/home" element={<Home user={user} setter={setUser} />} />
@@ -22,7 +26,9 @@ const App = () => {
             element={<Profile setter={setUser} user={user} />}
           />
         </Routes>
+       
       </BrowserRouter>
+       <Footer/>
     </TheApp>
   );
 };
