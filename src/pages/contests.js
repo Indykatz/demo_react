@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Navbar from "../components/navbar";
+import { FlexBox, EachBox } from "../styles/contests.styed";
 
 const Contests = ({ setter, user }) => {
   // useState
@@ -30,9 +31,9 @@ const Contests = ({ setter, user }) => {
       <h1>Welcome {user}</h1>
       <div>
         {error && <p>{error}</p>}
-        <div>
+        <FlexBox>
           {contests.map((contest) => (
-            <div key={contest.id}>
+            <EachBox key={contest.id}>
               <h3>{contest.name}</h3>
               {contest.url}
               <ul>
@@ -41,9 +42,9 @@ const Contests = ({ setter, user }) => {
                 <li>{contest.site}</li>
                 <li>{contest.status}</li>
               </ul>
-            </div>
+            </EachBox>
           ))}
-        </div>
+        </FlexBox>
       </div>
     </div>
   );

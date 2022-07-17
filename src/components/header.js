@@ -1,10 +1,10 @@
-import {HeaderStyle} from "../styles/header.styled"
+import { HeaderStyle, HeaderH1, HeaderH2 } from "../styles/header.styled";
 
 const Header = () => {
   return (
     <HeaderStyle>
-      <h1>Demo app</h1>
-      <h2>Added styled components</h2>
+      <HeaderH1>App Practice Area</HeaderH1>
+      <HeaderH2>Developed by Kat & Eddie</HeaderH2>
     </HeaderStyle>
   );
 };
