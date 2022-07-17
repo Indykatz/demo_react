@@ -34,6 +34,13 @@ const Contests = ({ setter, user }) => {
           {contests.map((contest) => (
             <div key={contest.id}>
               <h3>{contest.name}</h3>
+              {contest.url}
+              <ul>
+                <li>{contest.start_time}</li>
+                <li>{contest.end_time}</li>
+                <li>{contest.site}</li>
+                <li>{contest.status}</li>
+              </ul>
             </div>
           ))}
         </div>
