@@ -26,6 +26,7 @@ const App = () => {
             path="/profile"
             element={<Profile setter={setUser} user={user} />}
           />
+          <Route path="/contest" element={<Contest user={user} setter={setUser}/>} />
         </Routes>
        </Content>
       </BrowserRouter>
