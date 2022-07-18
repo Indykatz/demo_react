@@ -1,31 +1,35 @@
 import { Link, Navigate } from "react-router-dom";
+import { LiStyled, NavStyled } from "../styles/navbar.styled";
 
 const Navbar = ({ user, setter }) => {
   return (
-    <nav className="nav">
+    <nav>
       {!user && <Navigate to="/" />}
-      <ul>
-        <li>
+      
+      <NavStyled>
+      
+        <LiStyled>
           <Link to="/home">Home</Link>
-        </li>
-        <li>
+        </LiStyled>
+        <LiStyled>
           <Link to="/profile">Profile</Link>
-        </li>
-        <li>
+        </LiStyled>
+        <LiStyled>
           <Link to="/feed">Feed</Link>
-        </li>
-        <li>
+        </LiStyled>
+        <LiStyled>
           <Link to="/contests">Contest</Link>
-        </li>
-        <li
+        </LiStyled>
+        <LiStyled
           onClick={() => {
             setter();
             localStorage.removeItem("myToken");
           }}
         >
           Log Out
-        </li>
-      </ul>
+        </LiStyled>
+      
+    </NavStyled>
     </nav>
   );
 };
