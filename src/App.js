@@ -4,7 +4,7 @@ import Login from "./pages/login";
 import Home from "./pages/home";
 import Feed from "./pages/feed";
 import Profile from "./pages/profile";
-import "./App.css";
+// import "./App.css";
 import { TheApp, Content } from "./styles/app.styled";
 import Header from "./components/header";
 import Footer from "./components/footer";
