@@ -80,3 +80,14 @@ export const deleteFetch = async (setter) => {
     console.log(error);
   }
 };
+
+// Kat - Code Contest API - 
+export const fetechContest = async (setter) => {
+  try {
+    const res = await fetch(process.env.REACT_APP_KONTEST);
+    const data = await res.json();
+    setter(data);
+  } catch (error) {
+    console.log(error);
+  }
+};
