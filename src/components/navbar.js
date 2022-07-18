@@ -2,7 +2,7 @@ import { Link, Navigate } from "react-router-dom";
 
 const Navbar = ({ user, setter }) => {
   return (
-    <nav>
+    <nav className="nav">
       {!user && <Navigate to="/" />}
       <ul>
         <li>
