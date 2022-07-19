@@ -14,17 +14,25 @@ const Options = () => {
   //   if optionButton.Status == "Going"
   // else if optionButton.Status == "Maybe"
   // else if optionButton.Status == "Not Going"
+
   const [status, setStatus] = useState([]);
-  const handleClick = () => {
-    console.log()
-  };
 
   return (
     <div>
       <div>
         {optionButtons.map((optionButton) => {
-          return <button value={optionButton.Status} onClick={handleClick}>{optionButton.Status}</button>;
+          return (
+            <button
+              value={optionButton}
+              onClick={() => setStatus([...status, optionButton.Status])}
+            >
+              {optionButton.Status}
+            </button>
+          );
         })}
+      </div>
+      {status}
+      <div>
       </div>
     </div>
   );
