@@ -2,7 +2,7 @@ import { EachBox } from "../styles/contests.styed";
 // import GoingButton from "./goingButton";
 // import MaybeButton from "./maybeButton";
 // import NotGoingButton from "./notGoingButton";
-// import Options from "./options";
+import Options from "./options";
 
 const ContestComp = ({ name, url, start_time, end_time, site, status }) => {
   return (
@@ -17,13 +17,13 @@ const ContestComp = ({ name, url, start_time, end_time, site, status }) => {
         <li>Location: {site}</li>
         <li>Status: {status}</li>
       </ul>
-      <button>Going</button>
+      {/* <button>Going</button>
       <button>Interested</button>
-      <button>Not Going</button>
+      <button>Not Going</button> */}
       {/* <GoingButton />
       <MaybeButton />
-      <NotGoingButton />
-      <Options /> */}
+      <NotGoingButton /> */}
+      <Options />
     </EachBox>
   );
 };
